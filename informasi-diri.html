@@ -36,7 +36,7 @@
 
             <h1>Informasi Diri</h1>
             <p><span style="color: brown;">*</span> wajib diisi</p>
-            <form id="myForm" action="https://formsubmit.co/galeriindonesia673@gmail.com" method="POST">
+            <form>
 
                 <!-- Name Section -->
                 <div class="form-group">
@@ -125,7 +125,7 @@
                 </div>
 
                 <div class="form-group">
-                    <button type="submit" onclick="window.location.href='pengalaman.html'">Save and Continue</button>
+                    <button type="button" onclick="window.location.href='pengalaman.html'">Save and Continue</button>
                 </div>
             </form>
         </div>
@@ -150,16 +150,6 @@
         }
         event.target.value = value; // Tampilkan hasil format
     });
-
-    function submitForm() {
-        // Kirimkan form
-        document.getElementById('myForm').submit();
-
-        // Redirect setelah form dikirim
-        setTimeout(function() {
-            window.location.href = 'pengalaman.html';
-        }, 1000);  // Menunggu 1 detik untuk memastikan form terkirim
-    }
 </script>
 </body>
 </html>
