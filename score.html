@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">    
+</head>
+<body>
+    <header class="header">
+        <div class="nav">
+            <div class="logo">
+                <img id="logo-image" src="asset/logo.png" alt="logo">
+            </div>
+        </div>
+    </header>
+    
+    <div class="form-background" style="height: 896px;">
+        <div class="form-container" style="height: 896px; display: flex; flex-direction: column; text-align: center; justify-content: center; align-items: center;">
+            <h3>Score Akhir</h3>                
+            <div class="circle-progress">
+                <svg width="120" height="120" viewBox="0 0 120 120">
+                    <circle cx="60" cy="60" r="50" stroke="lightgray" stroke-width="10" fill="none" />
+                    <circle id="progress-bar" cx="60" cy="60" r="50" stroke="gray" stroke-width="10" fill="none" stroke-dasharray="314.159" stroke-dashoffset="314.159" />
+                </svg>
+                <span id="score-text">0%</span>
+            </div>
+            
+        </div>
+    </div>
+
+<script>
+    // Score value, replace this with your dynamic score value
+    const score = Math.floor(Math.random() * (40 - 25 + 1)) + 25;  // For example, 75% score
+    
+    const progressBar = document.getElementById("progress-bar");
+    const scoreText = document.getElementById("score-text");
+
+    // Calculate stroke-dashoffset based on score
+    const radius = 50;
+    const circumference = 2 * Math.PI * radius;
+    const offset = circumference - (score / 100) * circumference;
+
+    // Set progress bar length and color
+    progressBar.style.strokeDashoffset = offset;
+
+    // Update score text
+    scoreText.textContent = `${score}%`;
+
+    // Set color based on score
+    if (score > 70) {
+        progressBar.style.stroke = "green";
+    } else if (score > 40) {
+        progressBar.style.stroke = "yellow";
+    } else {
+        progressBar.style.stroke = "red";
+    }
+</script>
+
+</body>
+</html>
