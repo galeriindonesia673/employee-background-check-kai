@@ -219,3 +219,17 @@ body {
 .loading-bar:nth-child(5) {
     animation-delay: 1.2s;
 }
+
+.circle-progress {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#score-text {
+    position: absolute;
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+}
