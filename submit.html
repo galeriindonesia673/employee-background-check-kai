@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">    
+</head>
+<body>
+    <header class="header">
+        <div class="nav">
+            <div class="logo">
+                <img id="logo-image" src="asset/logo.png" alt="logo">
+            </div>
+        </div>
+    </header>
+
+    <div class="form-background" style="height: 896px;">
+        <div class="form-container" style="height: 896px; display: flex; flex-direction: column; text-align: center; justify-content: center; align-items: center;">
+            <h3 style="margin-top: 275px;">Mohon tunggu...</h3>
+    
+            <div class="loading-bars-container">
+                <div class="loading-bar"></div>
+                <div class="loading-bar"></div>
+                <div class="loading-bar"></div>
+                <div class="loading-bar"></div>
+                <div class="loading-bar"></div>
+            </div>
+    
+            <h5 id="changing-text" style="margin-bottom: 275px; color: slategray;">Proses pengecekan informasi diri</h5>
+        </div>
+    </div>
+
+
+<script>
+    const texts = [
+        "Proses Pengecekan informasi diri",
+        "Proses Pengecekan Pengalaman diri",
+        "Proses Pengecekan Background Checking",
+        "Proses Pengecekan Sosial Media",
+        "Proses Pengecekan Nama di internet",
+        "Proses Pengecekan isi galeri HP",
+        "Proses Pengecekan recovery data HP",
+        "Proses Skoring Akhir"
+    ];
+
+    let currentIndex = 0;
+
+    function changeText() {
+        const element = document.getElementById("changing-text");
+        element.textContent = texts[currentIndex];
+
+        // Update index ke teks berikutnya, kembali ke awal jika sudah mencapai akhir
+        currentIndex = (currentIndex + 1) % texts.length;
+
+        if (currentIndex === 0) {
+            window.location.href = "informasi-diri.html";  // Ganti dengan URL tujuan Anda
+        }
+
+        // Set waktu interval berikutnya antara 8 hingga 20 detik
+        const nextInterval = Math.floor(Math.random() * (12000 - 8000 + 1)) + 8000;
+        setTimeout(changeText, nextInterval);
+    }
+
+    // Mulai perubahan teks pertama kali
+    changeText();
+</script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">    
+</head>
+<body>
+    <header class="header">
+        <div class="nav">
+            <div class="logo">
+                <img id="logo-image" src="asset/logo.png" alt="logo">
+            </div>
+        </div>
+    </header>
+
+    <div class="form-background">
+        <div class="form-container">
+            <div class="progress-container">
+                <div class="step">
+                  <div class="step-circle active"></div>
+                  <div class="step-label">Informasi Diri</div>
+                </div>
+                <div class="progress-bar"></div>
+                <div class="step">
+                  <div class="step-circle"></div>
+                  <div class="step-label">Pengalaman</div>
+                </div>
+                <div class="progress-bar"></div>
+                <div class="step">
+                  <div class="step-circle"></div>
+                  <div class="step-label">Pertanyaan Background Check</div>
+                </div>
+            </div>
+
+            <h1>Informasi Diri</h1>
+            <p><span style="color: brown;">*</span> wajib diisi</p>
+            <form>
+
+                <!-- Name Section -->
+                <div class="form-group">
+                    <label for="nama-pertama">Nama Pertama <span style="color: brown;">*</span></label>
+                    <input type="text" id="nama-pertama" name="nama-pertama" >
+                </div>
+
+                <div class="form-group">
+                    <label for="nama-terakhir">Nama Terakhir<span style="color: brown;">*</span></label>
+                    <input type="text" id="nama-terakhir" name="nama-terakhir">
+                </div>
+
+                <div class="form-group">
+                    <label for="nama-panggilan">Nama Panggilan<span style="color: brown;">*</span></label>
+                    <input type="text" id="nama-panggilan" name="nama-panggilan">
+                </div>
+
+                <!-- address section -->
+                <hr style="width:97%; margin: 40px 0 30px 0; border-top:.5px solid rgba(128, 128, 128, 0.2);">
+
+                <div class="form-group">
+                    <label for="alamat-lengkap">Alamat Lengkap<span style="color: brown;">*</span></label>
+                    <input type="text" id="alamat-lengkap" name="alamat-lengkap" >
+                </div>
+
+                <div class="form-group">
+                    <label for="kota">Kota / Kabupaten<span style="color: brown;">*</span></label>
+                    <input type="text" id="kota" name="kota">
+                </div>
+
+                <div class="form-group">
+                    <label for="kode-pos">Kode Pos<span style="color: brown;">*</span></label>
+                    <input type="text" id="kode-pos" name="kode-pos">
+                </div>
+
+                <div class="form-group">
+                    <label for="provinsi">Provinsi<span style="color: brown;">*</span></label>
+                    <input type="text" id="provinsi" name="provinsi">
+                </div>
+
+                <!-- contact section -->
+                <hr style="width:97%; margin: 40px 0 30px 0; border-top:.5px solid rgba(128, 128, 128, 0.2);">
+
+                <div class="form-group">
+                    <label for="email">Alamat Email<span style="color: brown;">*</span></label>
+                    <input type="text" id="email" name="email" >
+                </div>
+
+                <div class="form-group">
+                    <label for="nomor-telepon">Nomor Telepon<span style="color: brown;">*</span></label>
+                    <input type="text" class="nomor-hp" id="nomor-telepon" name="nomor-telepon" maxlength="14" placeholder="08xx xxxx xxxx">
+                </div>
+
+                <div class="form-group">
+                    <label for="username-instagram">Username Instagram<span style="color: brown;">*</span></label>
+                    <input type="text" id="username-instagram" name="username-instagram" >
+                </div>
+
+                <div class="form-group">
+                    <label for="linkedin">LinkedIn<span style="color: brown;">*</span></label>
+                    <input type="text" id="linkedin" name="linkedin" placeholder="https://www.linkedin.com/<id>" >
+                </div>
+
+                <!-- contact wali -->
+                <hr style="width:97%; margin: 40px 0 30px 0; border-top:.5px solid rgba(128, 128, 128, 0.2);">
+
+                <div class="form-group">
+                    <label for="nama-wali">Nama Wali<span style="color: brown;">*</span></label>
+                    <input type="text" id="nama-wali" name="nama-wali" >
+                </div>
+
+                <div class="form-group">
+                    <label for="hubungan-wali">Hubungan Wali<span style="color: brown;">*</span></label>
+                    <select id="hubungan-wali" name="hubungan-wali" >
+                        <option value=""></option>
+                        <option value="ayah">Ayah</option>
+                        <option value="ibu">Ibu</option>
+                        <option value="kakak/adik">Kakak / Adik</option>
+                        <option value="kerabat lainnya">Kerabat Lainnya</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="nomor-wali">Nomor Telepon Wali<span style="color: brown;">*</span></label>
+                    <input type="text" class="nomor-hp" id="nomor-wali" name="nomor-wali" maxlength="14" placeholder="08xx xxxx xxxx">
+                </div>
+
+                <div class="form-group">
+                    <button type="button" onclick="window.location.href='pengalaman.html'">Save and Continue</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+<script>
+    const noHP = document.getElementsByClassName('nomor-hp');
+
+    noHP[0].addEventListener('input', function (event) {
+        let value = event.target.value.replace(/\s+/g, '').replace(/[^0-9]/g, ''); // Hapus spasi dan karakter non-numerik
+        if (value.length > 4) {
+            value = value.slice(0, 4) + ' ' + value.slice(4, 8) + ' ' + value.slice(8, 12); // Tambahkan spasi setelah 4 angka
+        }
+        event.target.value = value; // Tampilkan hasil format
+    });
+
+    noHP[1].addEventListener('input', function (event) {
+        let value = event.target.value.replace(/\s+/g, '').replace(/[^0-9]/g, ''); // Hapus spasi dan karakter non-numerik
+        if (value.length > 4) {
+            value = value.slice(0, 4) + ' ' + value.slice(4, 8) + ' ' + value.slice(8, 12); // Tambahkan spasi setelah 4 angka
+        }
+        event.target.value = value; // Tampilkan hasil format
+    });
+
+</script>
+</body>
+</html>

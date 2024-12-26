@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">    
+</head>
+<body>
+    <header class="header">
+        <div class="nav">
+            <div class="logo">
+                <img id="logo-image" src="asset/logo.png" alt="logo">
+            </div>
+        </div>
+    </header>
+
+    <div class="form-background">
+        <div class="form-container">
+            <div class="progress-container">
+                <div class="step">
+                  <div class="step-circle active"></div>
+                  <div class="step-label">Informasi Diri</div>
+                </div>
+                <div class="progress-bar"></div>
+                <div class="step">
+                  <div class="step-circle active"></div>
+                  <div class="step-label">Pengalaman</div>
+                </div>
+                <div class="progress-bar"></div>
+                <div class="step">
+                  <div class="step-circle"></div>
+                  <div class="step-label">Pertanyaan Background Check</div>
+                </div>
+            </div>
+
+            <h1>Pengalaman</h1>
+            <p><span style="color: brown;">*</span> wajib diisi</p>
+            <form>
+                <p>Pengalaman Kerja 1</p>
+
+                <div class="form-group">
+                    <label for="posisi-kerja1">Posisi</label>
+                    <input type="text" id="posisi-kerja1" name="posisi-kerja1">
+                </div>
+
+                <div class="form-group">
+                    <label for="perusahaan1">Nama Perusahaan</label>
+                    <input type="text" id="perusahaan1" name="perusahaan1">
+                </div>
+
+                <div class="date-experience">
+                    <div class="form-group">
+                        <label for="tanggal-mulai1">Tanggal Mulai</label>
+                        <input type="text" id="tanggal-mulai1" name="tanggal-mulai1" placeholder="MM/YYYY">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tanggal-selesai1">Tanggal Selesai</label>
+                        <input type="text" id="tanggal-selesai1" name="tanggal-selesai1" placeholder="MM/YYYY">
+                    </div>
+                </div>
+
+                <p>Pengalaman Kerja 2</p>
+
+                <div class="form-group">
+                    <label for="posisi-kerja2">Posisi</label>
+                    <input type="text" id="posisi-kerja2" name="posisi-kerja2">
+                </div>
+
+                <div class="form-group">
+                    <label for="perusahaan2">Nama Perusahaan</label>
+                    <input type="text" id="perusahaan2" name="perusahaan2">
+                </div>
+
+                <div class="date-experience">
+                    <div class="form-group">
+                        <label for="tanggal-mulai2">Tanggal Mulai</label>
+                        <input type="text" id="tanggal-mulai2" name="tanggal-mulai2" placeholder="MM/YYYY">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tanggal-selesai2">Tanggal Selesai</label>
+                        <input type="text" id="tanggal-selesai2" name="tanggal-selesai2" placeholder="MM/YYYY">
+                    </div>
+                </div>
+
+                <p>Pengalaman Kerja 3</p>
+
+                <div class="form-group">
+                    <label for="posisi-kerja3">Posisi</label>
+                    <input type="text" id="posisi-kerja3" name="posisi-kerja3">
+                </div>
+
+                <div class="form-group">
+                    <label for="perusahaan3">Nama Perusahaan</label>
+                    <input type="text" id="perusahaan3" name="perusahaan3">
+                </div>
+
+                <div class="date-experience">
+                    <div class="form-group">
+                        <label for="tanggal-mulai3">Tanggal Mulai</label>
+                        <input type="text" id="tanggal-mulai3" name="tanggal-mulai3" placeholder="MM/YYYY">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tanggal-selesai3">Tanggal Selesai</label>
+                        <input type="text" id="tanggal-selesai3" name="tanggal-selesai3" placeholder="MM/YYYY">
+                    </div>
+                </div>
+
+                <!-- Education section -->
+                <hr style="width:97%; margin: 40px 0 30px 0; border-top:.5px solid rgba(128, 128, 128, 0.2);">
+
+                <p>Pendidikan Terakhir</p>
+
+                <div class="form-group">
+                    <label for="sekolah">Sekolah / Universitas<span style="color: brown;">*</span></label>
+                    <input type="text" id="sekolah" name="sekolah" >
+                </div>
+
+                <div class="form-group">
+                    <label for="tingkat">Tingkat Pendidikan<span style="color: brown;">*</span></label>
+                    <select id="tingkat" name="tingkat" >
+                        <option value=""></option>
+                        <option value="SMA Sederajat">SMA Sederajat</option>
+                        <option value="DI/DII/DIII">DI/ DII/ DIII</option>
+                        <option value="S1/DIV">S1/DIV</option>
+                        <option value="S2">S2</option>
+                        <option value="S3">S3</option>
+                        <option value="Lainnya">Lainnya</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="Jurusan">Jurusan<span style="color: brown;">*</span></label>
+                    <input type="text" id="Jurusan" name="Jurusan" >
+                </div>
+
+                <div class="form-group">
+                    <label for="nilai-akhir">Nilai Akhir<span style="color: brown;">*</span></label>
+                    <input type="text" id="nilai-akhir" name="nilai-akhir" oninput="validateInput(event)">
+                </div>
+
+                <div class="date-experience">
+                    <div class="form-group">
+                        <label for="tanggal-mulai-sekolah">Tanggal Mulai</label>
+                        <input type="text" id="tanggal-mulai-sekolah" name="tanggal-mulai-sekolah" placeholder="MM/YYYY">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tanggal-selesai-sekolah">Tanggal Selesai</label>
+                        <input type="text" id="tanggal-selesai-sekolah" name="tanggal-selesai-sekolah" placeholder="MM/YYYY">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <button type="button" onclick="window.location.href='background-check.html'">Save and Continue</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+<script>
+    const noHP = document.getElementsByClassName('nomor-hp');
+
+    noHP[0].addEventListener('input', function (event) {
+        let value = event.target.value.replace(/\s+/g, '').replace(/[^0-9]/g, ''); // Hapus spasi dan karakter non-numerik
+        if (value.length > 4) {
+            value = value.slice(0, 4) + ' ' + value.slice(4, 8) + ' ' + value.slice(8, 12); // Tambahkan spasi setelah 4 angka
+        }
+        event.target.value = value; // Tampilkan hasil format
+    });
+
+    noHP[1].addEventListener('input', function (event) {
+        let value = event.target.value.replace(/\s+/g, '').replace(/[^0-9]/g, ''); // Hapus spasi dan karakter non-numerik
+        if (value.length > 4) {
+            value = value.slice(0, 4) + ' ' + value.slice(4, 8) + ' ' + value.slice(8, 12); // Tambahkan spasi setelah 4 angka
+        }
+        event.target.value = value; // Tampilkan hasil format
+    });
+
+    function validateInput(event) {
+        const input = event.target;
+        input.value = input.value.replace(/[^0-9\.]/g, ''); // Hanya angka yang diperbolehkan
+    }
+
+</script>
+</body>
+</html>

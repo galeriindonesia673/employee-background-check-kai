@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">    
+</head>
+<body>
+    <header class="header">
+        <div class="nav">
+            <div class="logo">
+                <img id="logo-image" src="asset/logo.png" alt="logo">
+            </div>
+        </div>
+    </header>
+
+    <div class="form-background">
+        <div class="form-container">
+            <div class="progress-container">
+                <div class="step">
+                  <div class="step-circle active"></div>
+                  <div class="step-label">Informasi Diri</div>
+                </div>
+                <div class="progress-bar"></div>
+                <div class="step">
+                  <div class="step-circle active"></div>
+                  <div class="step-label">Pengalaman</div>
+                </div>
+                <div class="progress-bar"></div>
+                <div class="step">
+                  <div class="step-circle active"></div>
+                  <div class="step-label">Pertanyaan Background Check</div>
+                </div>
+            </div>
+
+            <h1>Background Checking</h1>
+            <p><span style="color: brown;">*</span> wajib diisi</p>
+            <form>
+
+                <!-- Name Section -->
+                <div id="question-container"></div>
+
+                <div class="form-group">
+                    <button type="button" onclick="window.location.href='submit.html'">Save and Continue</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <script>
+        function createQuestion(id, questionText, name) {
+            return `
+                <div class="form-group">
+                    <label for="${id}">${questionText} <span style="color: brown;">*</span></label>
+                    <div class="radio-container">
+                        <div>
+                            <input type="radio" id="${id}-yes" class="radio-label" name="${name}" value="iya">
+                            <label style="margin-top : 6px" for="${id}-yes">Iya</label>
+                        </div>
+                        <div>
+                            <input type="radio" id="${id}-no" class="radio-label" name="${name}" value="tidak">
+                            <label style="margin-top : 6px" for="${id}-no">Tidak</label>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+    
+        // Menggunakan fungsi untuk membuat pertanyaan
+        const container = document.getElementById('question-container');
+        container.innerHTML += createQuestion('question-1', 'Apakah Anda pernah menggunakan nama lain dalam dokumen resmi?', 'q1');
+        container.innerHTML += createQuestion('question-2', 'Apakah Anda pernah terlibat dalam tindakan plagiat selama pendidikan Anda?', 'q2');
+        container.innerHTML += createQuestion('question-3', 'Apakah Anda pernah diberhentikan secara tidak hormat dari pekerjaan sebelumnya?', 'q3');
+        container.innerHTML += createQuestion('question-4', 'Apakah Anda pernah terlibat dalam konflik serius dengan rekan kerja atau atasan?', 'q4');
+        container.innerHTML += createQuestion('question-5', 'Apakah Anda pernah memiliki catatan kriminal sebelumnya?', 'q5');
+        container.innerHTML += createQuestion('question-6', 'Apakah Anda sedang terlibat dalam proses hukum saat ini?', 'q6');
+        container.innerHTML += createQuestion('question-7', 'Apakah Anda pernah terlibat dalam kasus penipuan finansial?', 'q7');
+        container.innerHTML += createQuestion('question-8', 'Apakah Anda pernah melanggar kebijakan perusahaan sebelumnya?', 'q8');
+        container.innerHTML += createQuestion('question-9', 'Apakah Anda pernah menerima atau memberikan suap untuk keuntungan pribadi?', 'q9');
+        container.innerHTML += createQuestion('question-10', 'Apakah Anda pernah memposting hal yang menjelekkan perusahaan tempat Anda bekerja?', 'q10');
+        container.innerHTML += createQuestion('question-11', 'Apakah Anda pernah menyebarkan data pribadi orang lain tanpa izin?', 'q11');
+        container.innerHTML += createQuestion('question-12', 'Apakah Anda pernah menyebarkan informasi rahasia perusahaan?', 'q12');
+        container.innerHTML += createQuestion('question-13', 'Apakah Anda pernah menyebarkan rumor yang tidak benar tentang kolega?', 'q13');
+        container.innerHTML += createQuestion('question-14', 'Apakah Anda pernah menggunakan posisi Anda untuk menekan kolega?', 'q14');
+        container.innerHTML += createQuestion('question-15', 'Apakah Anda pernah menyebarkan gosip yang merugikan perusahaan?', 'q15');
+        container.innerHTML += createQuestion('question-16', 'Apakah Anda pernah terlibat dalam penyebaran berita palsu?', 'q16');
+        container.innerHTML += createQuestion('question-17', 'Apakah Anda pernah menggunakan informasi rahasia perusahaan untuk tujuan pribadi?', 'q17');
+        container.innerHTML += createQuestion('question-18', 'Apakah Anda pernah melakukan pemalsuan dokumen?', 'q18');
+        container.innerHTML += createQuestion('question-19', 'Apakah Anda pernah terlibat dalam tindak kekerasan fisik?', 'q19');
+        container.innerHTML += createQuestion('question-20', 'Apakah Anda memiliki riwayat penggunaan narkoba?', 'q20');
+        container.innerHTML += createQuestion('question-21', 'Apakah Anda pernah terlibat sebagai pengedar narkoba?', 'q21');
+        container.innerHTML += createQuestion('question-22', 'Apakah Anda pernah menjual konten pribadi dengan muatan seksual (18+)?', 'q22');
+        container.innerHTML += createQuestion('question-23', 'Apakah Anda pernah menjual tubuh untuk mendapatkan uang?', 'q23');
+        container.innerHTML += createQuestion('question-24', 'Apakah Anda pernah terlibat dalam aktivitas yang melibatkan pemberian layanan fisik secara pribadi untuk mendapatkan keuntungan finansial?', 'q24');
+        container.innerHTML += createQuestion('question-25', 'Apakah Anda pernah dipermasalahkan atas tindakan pelecehan seksual?', 'q25');
+    </script>
+</body>
+</html>
