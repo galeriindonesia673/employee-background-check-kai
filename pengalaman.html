@@ -116,12 +116,12 @@
 
                 <div class="form-group">
                     <label for="sekolah">Sekolah / Universitas<span style="color: brown;">*</span></label>
-                    <input type="text" id="sekolah" name="sekolah" >
+                    <input type="text" id="sekolah" name="sekolah" required>
                 </div>
 
                 <div class="form-group">
                     <label for="tingkat">Tingkat Pendidikan<span style="color: brown;">*</span></label>
-                    <select id="tingkat" name="tingkat" >
+                    <select id="tingkat" name="tingkat" required>
                         <option value=""></option>
                         <option value="SMA Sederajat">SMA Sederajat</option>
                         <option value="DI/DII/DIII">DI/ DII/ DIII</option>
@@ -134,23 +134,23 @@
 
                 <div class="form-group">
                     <label for="Jurusan">Jurusan<span style="color: brown;">*</span></label>
-                    <input type="text" id="Jurusan" name="Jurusan" >
+                    <input type="text" id="Jurusan" name="Jurusan"  required>
                 </div>
 
                 <div class="form-group">
                     <label for="nilai-akhir">Nilai Akhir<span style="color: brown;">*</span></label>
-                    <input type="text" id="nilai-akhir" name="nilai-akhir" oninput="validateInput(event)">
+                    <input type="text" id="nilai-akhir" name="nilai-akhir" oninput="validateInput(event)" required>
                 </div>
 
                 <div class="date-experience">
                     <div class="form-group">
                         <label for="tanggal-mulai-sekolah">Tanggal Mulai</label>
-                        <input type="text" id="tanggal-mulai-sekolah" name="tanggal-mulai-sekolah" placeholder="MM/YYYY">
+                        <input type="text" id="tanggal-mulai-sekolah" name="tanggal-mulai-sekolah" placeholder="MM/YYYY" required>
                     </div>
 
                     <div class="form-group">
                         <label for="tanggal-selesai-sekolah">Tanggal Selesai</label>
-                        <input type="text" id="tanggal-selesai-sekolah" name="tanggal-selesai-sekolah" placeholder="MM/YYYY">
+                        <input type="text" id="tanggal-selesai-sekolah" name="tanggal-selesai-sekolah" placeholder="MM/YYYY" required>
                     </div>
                 </div>
                 
